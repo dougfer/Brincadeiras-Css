@@ -9,9 +9,11 @@
   position:fixed;
   width:250px;
   height: 100%;
-  background: #042331;
+  background: linear-gradient(-90deg,#0f0c29, #302b63, #24243e);
+  background-size: 600% 600%;
   left: -250px;
   transition: all .5s ease;
+  animation: change 10s ease-in-out infinite ;
 }
 
 .sidebar header {
@@ -19,7 +21,7 @@
   color: white;
   text-align: center;
   line-height: 70px;
-  background: #063146;
+  background: #302b63;
   user-select: none;
 }
 
@@ -66,6 +68,7 @@ label #btn {
   font-size: 35px;
   color: white;
   transition: all 0.4s;
+  background: #302b63
 }
 
 label #cancel {
@@ -73,7 +76,7 @@ label #cancel {
   left: -195px;
   top: 17px;
   font-size: 30px;
-  color: #0a5275;
+  color: #302b63;
   padding: 4px 9px;
   transition: all 0.5s ease;
 }
@@ -104,3 +107,14 @@ section {
   transition: all 0.5s;
 }
 
+@keyframes change{
+  0%{
+      background-position: 0 50%;
+  }
+  50%{
+      background-position: 100% 50%;
+  }
+  100%{
+      background-position: 0 50%;
+  }
+}
